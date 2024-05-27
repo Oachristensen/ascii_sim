@@ -3,10 +3,10 @@ use rand::{thread_rng, Rng};
 use std::time::Duration;
 
 
-const Y_SIZE: usize = 100;
-const X_SIZE: usize = 100;
+const Y_SIZE: usize = 10;
+const X_SIZE: usize = 10;
 const MATRIX_SIZE: usize = Y_SIZE*X_SIZE;
-const NUM_SIM: usize = 1000;
+const NUM_SIM: usize = 50;
 
 // This doesnt work unless it is a square
 fn x_y(x: i32, y: i32) -> i32{
@@ -168,7 +168,7 @@ fn main() {
         (matrix_array,pixel_array) = update_matrix(matrix_array, pixel_array);
         draw_matrix(&matrix_array);
         println!();
-        sleep(Duration::new(0, 100000000));
+        sleep(Duration::new(0, 500000000));
     }
     
 }
